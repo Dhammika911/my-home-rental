@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myhome - Find your dream house</title>
+
+  
+  <link rel="shortcut icon" href="logo1.jpg" type="image/svg+xml">
+
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/premium-ui.css">
+
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"> 
+</head>
+
+<body>
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+          
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="Home logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <img src="images/logo.png" alt="Homeverse logo">
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="index.html" class="navbar-link active" data-nav-link>Home</a>
+              </li>
+
+              <li>
+                <a href="about.html" class="navbar-link" data-nav-link>About</a>
+              </li>
+
+              <li>
+                <a href="rentals.html" class="navbar-link" data-nav-link>Rentals</a>
+              </li>
+              <li>
+                <a href="review.html" class="navbar-link" data-nav-link>Review</a>
+              </li>
+              <li>
+                <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+        <div class="header-bottom-btn">
+          <button class="btn">Login</button>
+        </div>
+        <div class="header-bottom-actions">
+
+          
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+            <span>Menu</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">
+              <ion-icon name="home"></ion-icon>
+
+              <span>House Rent Agency</span>
+            </p>
+
+            <h2 class="h1 hero-title">Find Your Perfect Rental Home</h2>
+
+            <p class="hero-text">
+              A streamlined, easy, and secure way to find your new home!
+            </p>
+            
+            <a href="listing.html" class="btn" style="display: inline-block; width: max-content; margin-bottom: 20px; font-weight: 700; padding: 12px 24px; border-radius: 8px;">Add Listings</a>
+
+            <!-- HERO SEARCH FORM OVERLAY -->
+            <div class="hero-search-form">
+              <form id="heroSearchForm">
+                <div class="form-group">
+                  <label for="heroLocation">Location</label>
+                  <select id="heroLocation">
+                    <option value="">Any Location</option>
+                    <option value="colombo">Colombo</option>
+                    <option value="kandy">Kandy</option>
+                    <option value="galle">Galle</option>
+                    <option value="nuwara-eliya">Nuwara Eliya</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="heroType">Property Type</label>
+                  <select id="heroType">
+                    <option value="">Any Type</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="villa">Villa</option>
+                    <option value="office">Office Space</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="heroPrice">Max Budget</label>
+                  <select id="heroPrice">
+                    <option value="">Any Budget</option>
+                    <option value="200000">Rs. 200,000</option>
+                    <option value="400000">Rs. 400,000</option>
+                    <option value="600000">Rs. 600,000</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn search-submit-btn">Search</button>
+              </form>
+            </div>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="images/bg.jpg" alt="Modern house model" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      
+           
+
+
+
+      
+               
+        
+
+
+
+
+      <!-- 
+        - #PROPERTY
+      -->
+
+      
+        <div class="container">
+
+          
+
+          <h2 class="h2 section-title">Showcase Properties</h2>
+
+          <ul class="property-list has-scrollbar" id="featuredPropertiesList">
+            <li style="text-align: center; width: 100%; grid-column: span 3;"><p style="color: var(--cadet);">Loading featured properties...</p></li>
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      
+
+            
+                
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="images/logo-light.png" alt="Homeverse logo">
+          </a>
+
+          <p class="section-text">
+            Find your perfect rental home with us! We offer a wide range of properties to suit your needs, whether you're looking for a cozy apartment or a spacious family house
+          </p>
+
+          <ul class="contact-list">
+
+            <li>
+              <a href="#" class="contact-link">
+                <ion-icon name="location-outline"></ion-icon>
+
+                <address>colombo 10</address>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:041-2459075" class="contact-link">
+                <ion-icon name="call-outline"></ion-icon>
+
+                <span>041-2459075</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:contact@homeverse.com" class="contact-link">
+                <ion-icon name="mail-outline"></ion-icon>
+
+                <span>contact@homeverse.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">About</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">All Products</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Locations Map</a>
+            </li>
+
+           
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+           
+
+           
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms & Conditions</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Promotional Offers</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Customer Care</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            
+
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2025<a href="#">house</a>. All Rights Reserved
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/home-script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="./assets/js/premium-ui.js"></script>
+</body>
+
+</html>
