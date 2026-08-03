@@ -1,0 +1,210 @@
+/* Modern & Professional Contact Page CSS Scoped under contact-page styles */
+
+.contact-section-container {
+  padding: 120px 15px 80px 15px;
+  background-color: var(--alice-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.contact-header h2 {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-1);
+  color: var(--dark-jungle-green);
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-header h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--orange-soda);
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.contact-header p {
+  color: var(--cadet);
+  font-size: var(--fs-5);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* Left side Contact Info */
+.contact-info-panel {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0.04);
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.info-card-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  transition: transform var(--transition);
+}
+
+.info-card-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-card-item:hover {
+  transform: translateX(5px);
+}
+
+.info-icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: var(--seashell);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange-soda);
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: all var(--transition);
+  box-shadow: 0 4px 10px rgba(255, 90, 95, 0.1);
+}
+
+.info-card-item:hover .info-icon-box {
+  background-color: var(--orange-soda);
+  color: var(--white);
+}
+
+.info-details {
+  margin-left: 20px;
+}
+
+.info-details h4 {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-5);
+  color: var(--dark-jungle-green);
+  margin-bottom: 5px;
+  font-weight: var(--fw-600);
+}
+
+.info-details p {
+  color: var(--cadet);
+  font-size: var(--fs-6);
+  line-height: 1.5;
+}
+
+/* Right side Contact Form */
+.contact-form-panel {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-2);
+  border: 1px solid rgba(0,0,0,0.04);
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.1s;
+}
+
+.contact-form-panel h3 {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-2);
+  color: var(--dark-jungle-green);
+  margin-bottom: 25px;
+  font-weight: var(--fw-700);
+}
+
+.contact-form-panel .input-group {
+  margin-bottom: 20px;
+}
+
+.contact-form-panel label {
+  display: block;
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  color: var(--raisin-black-1);
+  margin-bottom: 8px;
+}
+
+.contact-form-panel input[type="text"],
+.contact-form-panel input[type="email"],
+.contact-form-panel textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: var(--ff-nunito-sans);
+  font-size: var(--fs-5);
+  color: var(--dark-jungle-green);
+  background-color: var(--white);
+  transition: all var(--transition);
+}
+
+.contact-form-panel textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form-panel input:focus,
+.contact-form-panel textarea:focus {
+  outline: none;
+  border-color: var(--orange-soda);
+  box-shadow: 0 0 0 3px rgba(255, 90, 95, 0.15);
+}
+
+.contact-send-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--orange-soda);
+  color: var(--white);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-1);
+}
+
+.contact-send-btn:hover {
+  background: var(--dark-jungle-green);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 90, 95, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-info-panel, .contact-form-panel {
+    padding: 30px 20px;
+  }
+  .contact-section-container {
+    padding: 100px 10px 60px 10px;
+  }
+}

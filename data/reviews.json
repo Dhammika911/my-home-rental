@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Kamal Perera",
+    "rating": 5,
+    "text": "Finding a rental apartment in Colombo was extremely easy through MyHome. Highly recommended service!",
+    "date": "2025-05-12",
+    "designation": "Tenant"
+  },
+  {
+    "name": "Anura Fernando",
+    "rating": 4,
+    "text": "Very clean layout and user-friendly interface. Finding property details and contacting advertisers is straightforward.",
+    "date": "2025-06-02",
+    "designation": "Tenant"
+  },
+  {
+    "name": "Nisha Silva",
+    "rating": 5,
+    "text": "Listing my property in Kandy was hassle-free. Got inquiries from potential renters within the first week of listing!",
+    "date": "2025-06-15",
+    "designation": "Property Owner"
+  }
+]
