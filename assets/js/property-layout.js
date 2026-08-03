@@ -177,13 +177,16 @@ document.addEventListener('DOMContentLoaded', function () {
   navbarLinks.forEach(link => link.addEventListener("click", toggleNavbar));
 
   // Sticky Header logic
-  window.addEventListener('scroll', function() {
-    if (window.scrollY >= 200) {
-      header.classList.add('active');
-    } else {
-      header.classList.remove('active');
-    }
-  });
+  if (!window.__propertyScrollRegistered) {
+    window.__propertyScrollRegistered = true;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY >= 200) {
+        header.classList.add('active');
+      } else {
+        header.classList.remove('active');
+      }
+    }, { passive: true });
+  }
 
   // 6. Hook up Contact Advertiser Form to API
   const advertiserForm = detailsContainer.querySelector('.contact-form');

@@ -30,6 +30,12 @@
     transform: translateY(0);
   }
 }
+
+/* Hide loading messages */
+#reviewsContainer p,
+#featuredPropertiesList li[style*="display: none"] {
+  display: none !important;
+}
   --dark-jungle-green: var(--text);
   --orange-soda: var(--primary);
   --cadet: var(--muted);

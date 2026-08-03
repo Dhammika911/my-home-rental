@@ -1,42 +1,12 @@
 'use strict';
 
+// All navigation and scroll handling is done in script.js
+// This file only handles premium UI enhancements
+
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('premium-ready');
 
-  const header = document.querySelector('[data-header]');
-  const setHeaderState = () => {
-    if (!header) return;
-    header.classList.toggle('premium-scrolled', window.scrollY > 24);
-  };
-  setHeaderState();
-  window.addEventListener('scroll', setHeaderState, { passive: true });
-
-  const currentPage = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.navbar-link').forEach((link) => {
-    const href = link.getAttribute('href');
-    if (href === currentPage) link.classList.add('active');
-  });
-
-  if (!window.__legacyNavReady) {
-    const navbar = document.querySelector('[data-navbar]');
-    const overlay = document.querySelector('[data-overlay]');
-    const navOpen = document.querySelector('[data-nav-open-btn]');
-    const navClose = document.querySelector('[data-nav-close-btn]');
-    const toggleMenu = () => {
-      navbar?.classList.toggle('active');
-      overlay?.classList.toggle('active');
-    };
-    navOpen?.addEventListener('click', toggleMenu);
-    navClose?.addEventListener('click', toggleMenu);
-    overlay?.addEventListener('click', toggleMenu);
-    document.querySelectorAll('[data-nav-link]').forEach((link) => {
-      link.addEventListener('click', () => {
-        navbar?.classList.remove('active');
-        overlay?.classList.remove('active');
-      });
-    });
-  }
-
+  // Only handle reveal animations - don't duplicate navbar or scroll listeners
   const revealTargets = document.querySelectorAll(
     'section, .property-card, .blog-card, .team-card, .info-card-item, .review-card, .contact-form-panel, .contact-info-panel'
   );
