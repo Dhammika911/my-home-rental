@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -945,4 +946,953 @@
   <script src="./assets/js/premium-ui.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rentals - Find your dream house</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="logo1.jpg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/premium-ui.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="Home logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <img src="images/logo.png" alt="Homeverse logo">
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+              </li>
+
+              <li>
+                <a href="about.html" class="navbar-link" data-nav-link>About</a>
+              </li>
+
+              <li>
+                <a href="rentals.html" class="navbar-link active" data-nav-link>Rentals</a>
+              </li>
+              <li>
+                <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+        <div class="header-bottom-btn">
+          <button class="btn">Login</button>
+        </div>
+        <div class="header-bottom-actions">
+
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+            <span>Menu</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #RENTALS HERO
+      -->
+
+      <section class="hero" id="rentals-hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">
+              <ion-icon name="home"></ion-icon>
+
+              <span>Available Properties</span>
+            </p>
+
+            <h2 class="h1 hero-title">Find Your Perfect Rental Home</h2>
+
+            <p class="hero-text">
+              Browse our selection of quality rental properties or list your own property
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #SEARCH FILTER
+      -->
+
+      <section class="search-filter">
+        <div class="container">
+          <form class="filter-form">
+            <div class="form-wrapper">
+              <div class="form-item">
+                <label for="location">Location</label>
+                <select name="location" id="location">
+                  <option value="">Any Location</option>
+                  <option value="colombo">Colombo</option>
+                  <option value="kandy">Kandy</option>
+                  <option value="galle">Galle</option>
+                  <option value="nuwara-eliya">Nuwara Eliya</option>
+                </select>
+              </div>
+
+              <div class="form-item">
+                <label for="property-type">Property Type</label>
+                <select name="property-type" id="property-type">
+                  <option value="">Any Type</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="house">House</option>
+                  <option value="villa">Villa</option>
+                  <option value="office">Office Space</option>
+                </select>
+              </div>
+
+              <div class="form-item">
+                <label for="price-range">Price Range</label>
+                <select name="price-range" id="price-range">
+                  <option value="">Any Range</option>
+                  <option value="100000-200000">Rs.100,000 - Rs.200,000</option>
+                  <option value="200000-400000">Rs.200,000 - Rs.400,000</option>
+                  <option value="400000-600000">Rs.400,000 - Rs.600,000</option>
+                  <option value="600000+">Rs.600,000+</option>
+                </select>
+              </div>
+
+              <div class="form-item">
+                <label for="bedrooms">Bedrooms</label>
+                <select name="bedrooms" id="bedrooms">
+                  <option value="">Any</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4+">4+</option>
+                </select>
+              </div>
+
+              <button class="search-btn btn">Search Properties</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 
+        - #FEATURED RENTALS
+      -->
+
+      <section class="property" id="featured-rentals">
+        <div class="container">
+
+          <h2 class="h2 section-title">Featured Rental Properties</h2>
+
+          <ul class="property-list has-scrollbar">
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="images/property-1.jpg" alt="New Apartment Nice View" class="w-100">
+                  </a>
+
+                  <div class="card-badge green">For Rent</div>
+
+                  <div class="banner-actions">
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+
+                      <address>Peradeniya Gardens, Kandy</address>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                    <strong>Rs.275,000</strong>/ Per Month
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">New Apartment Nice View</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>3</strong>
+
+                      <ion-icon name="bed-outline"></ion-icon>
+
+                      <span>Bedrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>2</strong>
+
+                      <ion-icon name="man-outline"></ion-icon>
+
+                      <span>Bathrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>3450</strong>
+
+                      <ion-icon name="square-outline"></ion-icon>
+
+                      <span>Square Ft</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-footer">
+                  <button class="btn">View Details</button>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="images/property-2.jpg" alt="Modern Apartments" class="w-100">
+                  </a>
+
+                  <div class="card-badge orange">For Rent</div>
+
+                  <div class="banner-actions">
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+
+                      <address>Colombo 10</address>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                    <strong>Rs.500,000</strong>/ Per Month
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Modern Apartments</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Providing easy access to amenities, transportation, and local attractions
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>3</strong>
+
+                      <ion-icon name="bed-outline"></ion-icon>
+
+                      <span>Bedrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>2</strong>
+
+                      <ion-icon name="man-outline"></ion-icon>
+
+                      <span>Bathrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>3450</strong>
+
+                      <ion-icon name="square-outline"></ion-icon>
+
+                      <span>Square Ft</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-footer">
+                  <button class="btn">View Details</button>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="images/property-3.jpg" alt="Comfortable House" class="w-100">
+                  </a>
+
+                  <div class="card-badge green">For Rent</div>
+
+                  <div class="banner-actions">
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+
+                      <address>Pita Kotte</address>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                    <strong>Rs.600,000</strong>/Month
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Comfortable House</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>6</strong>
+
+                      <ion-icon name="bed-outline"></ion-icon>
+
+                      <span>Bedrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>2</strong>
+
+                      <ion-icon name="man-outline"></ion-icon>
+
+                      <span>Bathrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>3400</strong>
+
+                      <ion-icon name="square-outline"></ion-icon>
+
+                      <span>Square Ft</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-footer">
+                  <button class="btn">View Details</button>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #ALL RENTALS
+      -->
+
+      <section class="property" id="all-rentals">
+        <div class="container">
+
+          <h2 class="h2 section-title">All Available Properties</h2>
+
+          <div class="property-grid">
+            
+            <!-- Property 1 -->
+            <div class="property-card">
+              <figure class="card-banner">
+                <a href="#">
+                  <img src="images/property-1.jpg" alt="Modern Apartment in Colombo" class="w-100">
+                </a>
+                <div class="card-badge green">For Rent</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Colombo 7</address>
+                  </button>
+                </div>
+              </figure>
+
+              <div class="card-content">
+                <div class="card-price">
+                  <strong>Rs.195,000</strong>/ Per Month
+                </div>
+                <h3 class="h3 card-title">
+                  <a href="#">Modern Apartment in Colombo</a>
+                </h3>
+                <p class="card-text">
+                  Spacious modern apartment with great city views and excellent amenities
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>2</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Bedrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>1</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Bathrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>1250</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>Square Ft</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-footer">
+                <button class="btn">View Details</button>
+              </div>
+            </div>
+            
+            <!-- Property 2 -->
+            <div class="property-card">
+              <figure class="card-banner">
+                <a href="#">
+                  <img src="images/property-2.jpg" alt="Family Home in Nugegoda" class="w-100">
+                </a>
+                <div class="card-badge green">For Rent</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Nugegoda</address>
+                  </button>
+                </div>
+              </figure>
+
+              <div class="card-content">
+                <div class="card-price">
+                  <strong>Rs.320,000</strong>/ Per Month
+                </div>
+                <h3 class="h3 card-title">
+                  <a href="#">Family Home in Nugegoda</a>
+                </h3>
+                <p class="card-text">
+                  Comfortable family home with garden, close to schools and shopping centers
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>4</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Bedrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>3</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Bathrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>2800</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>Square Ft</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-footer">
+                <button class="btn">View Details</button>
+              </div>
+            </div>
+            
+            <!-- Property 3 -->
+            <div class="property-card">
+              <figure class="card-banner">
+                <a href="#">
+                  <img src="images/property-3.jpg" alt="Luxury Villa in Galle" class="w-100">
+                </a>
+                <div class="card-badge orange">For Rent</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Galle Fort Area</address>
+                  </button>
+                </div>
+              </figure>
+
+              <div class="card-content">
+                <div class="card-price">
+                  <strong>Rs.850,000</strong>/ Per Month
+                </div>
+                <h3 class="h3 card-title">
+                  <a href="#">Luxury Villa in Galle</a>
+                </h3>
+                <p class="card-text">
+                  Elegant colonial-style villa with ocean views and private garden
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>5</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Bedrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>4</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Bathrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>4500</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>Square Ft</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-footer">
+                <button class="btn">View Details</button>
+              </div>
+            </div>
+            
+            <!-- Property 4 -->
+            <div class="property-card">
+              <figure class="card-banner">
+                <a href="#">
+                  <img src="images/property-1.jpg" alt="Studio Apartment in Dehiwala" class="w-100">
+                </a>
+                <div class="card-badge green">For Rent</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Dehiwala</address>
+                  </button>
+                </div>
+              </figure>
+
+              <div class="card-content">
+                <div class="card-price">
+                  <strong>Rs.90,000</strong>/ Per Month
+                </div>
+                <h3 class="h3 card-title">
+                  <a href="#">Studio Apartment in Dehiwala</a>
+                </h3>
+                <p class="card-text">
+                  Cozy studio apartment close to the beach with all necessary amenities
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>1</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Bedrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>1</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Bathrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>650</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>Square Ft</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-footer">
+                <button class="btn">View Details</button>
+              </div>
+            </div>
+            
+            <!-- Property 5 -->
+            <div class="property-card">
+              <figure class="card-banner">
+                <a href="#">
+                  <img src="images/property-2.jpg" alt="Office Space in Colombo" class="w-100">
+                </a>
+                <div class="card-badge green">For Rent</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Colombo 3</address>
+                  </button>
+                </div>
+              </figure>
+
+              <div class="card-content">
+                <div class="card-price">
+                  <strong>Rs.425,000</strong>/ Per Month
+                </div>
+                <h3 class="h3 card-title">
+                  <a href="#">Office Space in Colombo</a>
+                </h3>
+                <p class="card-text">
+                  Modern office space in a prime business location with parking facilities
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>Open</strong>
+                    <ion-icon name="business-outline"></ion-icon>
+                    <span>Layout</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>2</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Bathrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>2200</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>Square Ft</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-footer">
+                <button class="btn">View Details</button>
+              </div>
+            </div>
+            
+            <!-- Property 6 -->
+            <div class="property-card">
+              <figure class="card-banner">
+                <a href="#">
+                  <img src="images/property-3.jpg" alt="Mountain Cottage in Nuwara Eliya" class="w-100">
+                </a>
+                <div class="card-badge green">For Rent</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Nuwara Eliya</address>
+                  </button>
+                </div>
+              </figure>
+
+              <div class="card-content">
+                <div class="card-price">
+                  <strong>Rs.280,000</strong>/ Per Month
+                </div>
+                <h3 class="h3 card-title">
+                  <a href="#">Mountain Cottage in Nuwara Eliya</a>
+                </h3>
+                <p class="card-text">
+                  Charming cottage with mountain views, perfect for a peaceful retreat
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>3</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Bedrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>2</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Bathrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>1800</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>Square Ft</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-footer">
+                <button class="btn">View Details</button>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="pagination">
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #ADD LISTING SECTION
+      -->
+
+      <section class="add-listing" id="add-listing">
+        <div class="container">
+          <div class="add-listing-content">
+            <h2 class="h2 section-title">Have a Property to Rent Out?</h2>
+            <p class="section-text">
+              List your property with us and reach thousands of potential tenants. Our platform makes it easy to manage your rental listings.
+            </p>
+            <button class="btn">Add Your Listing</button>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="images/logo-light.png" alt="Homeverse logo">
+          </a>
+
+          <p class="section-text">
+            Find your perfect rental home with us! We offer a wide range of properties to suit your needs, whether you're looking for a cozy apartment or a spacious family house
+          </p>
+
+          <ul class="contact-list">
+
+            <li>
+              <a href="#" class="contact-link">
+                <ion-icon name="location-outline"></ion-icon>
+
+                <address>colombo 10</address>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:041-2459075" class="contact-link">
+                <ion-icon name="call-outline"></ion-icon>
+
+                <span>041-2459075</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:contact@homeverse.com" class="contact-link">
+                <ion-icon name="mail-outline"></ion-icon>
+
+                <span>contact@homeverse.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">About</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">All Products</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Locations Map</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms & Conditions</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Promotional Offers</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Customer Care</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2025<a href="#">house</a>. All Rights Reserved
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="./assets/js/premium-ui.js"></script>
+</body>
+
+>>>>>>> d2a3233c7955b6cf68c4c2a58831917bcc49adcb
 </html>
