@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Myhome</title>
+  
+  <link rel="shortcut icon" href="logo1.jpg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/premium-ui.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body.login-body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 90% 80%, rgba(20, 184, 166, 0.15) 0%, transparent 40%),
+                  var(--bg);
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body.login-body::before {
+      display: none; /* Disable standard loader for login */
+    }
+
+    /* Back home button */
+    .back-home {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .back-home:hover {
+      color: var(--primary);
+      transform: translateX(-4px);
+    }
+
+    .back-home ion-icon {
+      font-size: 20px;
+    }
+
+    /* Login container */
+    .auth-container {
+      width: 100%;
+      max-width: 480px;
+      background: var(--glass);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: 24px;
+      box-shadow: var(--shadow-lift);
+      padding: 40px;
+      animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .auth-logo {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .auth-logo img {
+      max-width: 180px;
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .auth-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text);
+      font-family: var(--ff-poppins);
+      margin-bottom: 8px;
+    }
+
+    .auth-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Auth Forms */
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrapper ion-icon {
+      position: absolute;
+      left: 16px;
+      font-size: 20px;
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .input-wrapper input {
+      padding: 14px 16px 14px 48px !important;
+      font-size: 0.95rem;
+      transition: var(--transition-fast);
+    }
+
+    .input-wrapper input:focus {
+      border-color: var(--primary) !important;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1) !important;
+      outline: none;
+    }
+
+    /* Password visibility toggle */
+    .password-toggle {
+      position: absolute;
+      right: 16px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .password-toggle:hover {
+      color: var(--primary);
+    }
+
+    .password-toggle ion-icon {
+      position: static;
+      font-size: 20px;
+      pointer-events: auto;
+    }
+
+    /* Remember me & Forgot Password */
+    .auth-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: -5px;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: var(--muted);
+    }
+
+    .remember-me input {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .forgot-link {
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .forgot-link:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+
+    /* Button */
+    .auth-btn {
+      width: 100%;
+      padding: 15px !important;
+      font-size: 1rem;
+      border-radius: 14px !important;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    /* Auth Footer / Toggle text */
+    .auth-footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .auth-toggle-btn {
+      color: var(--primary);
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: inline;
+      font-family: inherit;
+    }
+
+    .auth-toggle-btn:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+
+    /* Form tab toggling */
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="login-body">
+
+  <!-- Back to Home -->
+  <a href="index.html" class="back-home">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+    <span>Back to Home</span>
+  </a>
+
+  <div class="auth-container">
+    
+    <div class="auth-logo">
+      <img src="images/logo.png" alt="Myhome Logo">
+    </div>
+
+    <!-- LOGIN FORM TAB -->
+    <div id="loginTab">
+      <div class="auth-header">
+        <h2 class="auth-title">Welcome Back</h2>
+        <p class="auth-subtitle">Log in to manage your rentals and search properties</p>
+      </div>
+
+      <form class="auth-form" id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <div class="input-wrapper">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="email" id="loginEmail" placeholder="name@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-wrapper">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" id="loginPassword" placeholder="••••••••" required>
+            <button type="button" class="password-toggle" onclick="togglePasswordVisibility('loginPassword', this)">
+              <ion-icon name="eye-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-actions">
+          <label class="remember-me">
+            <input type="checkbox" id="rememberMe">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link" onclick="handleForgotPassword()">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn auth-btn">Log In</button>
+      </form>
+
+      <div class="auth-footer">
+        Don't have an account? 
+        <button class="auth-toggle-btn" onclick="switchTab('signup')">Sign Up</button>
+      </div>
+    </div>
+
+    <!-- SIGNUP FORM TAB -->
+    <div id="signupTab" class="hidden">
+      <div class="auth-header">
+        <h2 class="auth-title">Create Account</h2>
+        <p class="auth-subtitle">Join us to start posting or renting premium homes</p>
+      </div>
+
+      <form class="auth-form" id="signupForm">
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <div class="input-wrapper">
+            <ion-icon name="person-outline"></ion-icon>
+            <input type="text" id="signupName" placeholder="John Doe" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="signupEmail">Email Address</label>
+          <div class="input-wrapper">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="email" id="signupEmail" placeholder="name@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <div class="input-wrapper">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" id="signupPassword" placeholder="Min. 8 characters" minlength="8" required>
+            <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signupPassword', this)">
+              <ion-icon name="eye-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="remember-me" style="margin-top: 5px;">
+          <input type="checkbox" id="termsCheck" required>
+          <span style="font-size: 0.85rem;">I agree to the <a href="#" style="color: var(--primary);">Terms of Service</a> & <a href="#" style="color: var(--primary);">Privacy Policy</a></span>
+        </div>
+
+        <button type="submit" class="btn auth-btn">Create Account</button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? 
+        <button class="auth-toggle-btn" onclick="switchTab('login')">Log In</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Tab switching logic
+    function switchTab(tabName) {
+      const loginTab = document.getElementById('loginTab');
+      const signupTab = document.getElementById('signupTab');
+      
+      if (tabName === 'signup') {
+        loginTab.classList.add('hidden');
+        signupTab.classList.remove('hidden');
+        document.title = "Sign Up - Myhome";
+      } else {
+        signupTab.classList.add('hidden');
+        loginTab.classList.remove('hidden');
+        document.title = "Login - Myhome";
+      }
+    }
+
+    // Toggle Password Visibility
+    function togglePasswordVisibility(inputId, toggleBtn) {
+      const input = document.getElementById(inputId);
+      const icon = toggleBtn.querySelector('ion-icon');
+      
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.setAttribute('name', 'eye-off-outline');
+      } else {
+        input.type = 'password';
+        icon.setAttribute('name', 'eye-outline');
+      }
+    }
+
+    // Simple auth action feedback
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      alert(`Success! Logging in as: ${email}`);
+      window.location.href = 'index.html';
+    });
+
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('signupName').value;
+      alert(`Account created successfully for ${name}! Welcome to Myhome.`);
+      switchTab('login');
+    });
+
+    function handleForgotPassword() {
+      const email = prompt("Enter your email address to reset password:");
+      if (email) {
+        alert(`Reset link has been sent to: ${email}`);
+      }
+    }
+  </script>
+</body>
+</html>
