@@ -1,6 +1,6 @@
 .Review{
     padding: 4% 6%;
-    background-image: url('images\\image-10.jpg');
+    background-image:  url('../../images/image-10.jpg');
     background-size: cover;
     min-height: 100vh;
 }
