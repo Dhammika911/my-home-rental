@@ -409,12 +409,13 @@ button, a { transition: var(--transition); }
 
 
 
-
 .hero {
-  background: var(--cultured-2);
+  background-image: url('../images/image-10.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-block: var(--section-padding);
 }
-
 .hero-content { margin-bottom: 60px; }
 
 .hero-subtitle {
